@@ -4,7 +4,7 @@ import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import SimpleHero from '@/components/sections/layouts/hero/SimpleHero';
 import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import ContentTextbox from '@/components/textbox/ContentTextbox';
-import { PushableButton } from '@/components/buttons/PushableButton';
+import PushableButton from '@/components/buttons/PushableButton';
 import Image from 'next/image';
 
 const heroContent = { title: "Welcome to MySite", description: "Deliver clarity and purpose with our solutions.", primaryButtonText: "Get Started", secondaryButtonText: "Learn More" };
