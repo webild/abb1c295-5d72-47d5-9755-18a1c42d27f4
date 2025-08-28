@@ -5,7 +5,6 @@ import SimpleHero from '@/components/sections/layouts/hero/SimpleHero';
 import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import ContentTextbox from '@/components/textbox/ContentTextbox';
 import PushableButton from '@/components/buttons/PushableButton';
-import Image from 'next/image';
 
 const heroContent = { title: "Welcome to MySite", description: "Deliver clarity and purpose with our solutions.", primaryButtonText: "Get Started", secondaryButtonText: "Learn More" };
 const aboutContent = { description: "We strive to provide transparent and trustworthy services." };
@@ -20,7 +19,7 @@ const CustomContactForm = () => {
       <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="p-2 border rounded" required />
       <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="p-2 border rounded" required />
       <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="p-2 border rounded" required></textarea>
-      <PushableButton text="Submit" onClick={() => { /* Submit logic here */ }} className="bg-blue-500 text-white rounded" />
+      <PushableButton text="Submit" onClick={() => { /* Submit logic here */ }} className="bg-blue-500 text-white rounded">Submit</PushableButton>
       <p className="text-xs">{contactContent.privacyNote}</p>
     </form>
   );
@@ -36,10 +35,10 @@ export default function Home() {
         <MinimalAbout description={aboutContent.description} />
       </section>
       <section id="terms" className="bg-white py-16">
-        <ContentTextbox title={<h2>Terms of Service</h2>} description={<p>Summary of our terms and conditions.</p>} className="text-lg" />
+        <ContentTextbox title={<h2>Terms of Service</h2>} description={<p>Summary of our terms and conditions.</p>} className="text-lg" children={<div>Content for Terms of Service</div>} />
       </section>
       <section id="policy" className="bg-[#F9FAFB] py-16">
-        <ContentTextbox title={<h2>Privacy Policy</h2>} description={<p>Summary of our privacy practices.</p>} className="text-lg" />
+        <ContentTextbox title={<h2>Privacy Policy</h2>} description={<p>Summary of our privacy practices.</p>} className="text-lg" children={<div>Content for Privacy Policy</div>} />
       </section>
       <section id="contact" className="bg-white py-16">
         <h2 className="text-2xl font-bold">{contactContent.headline}</h2>
