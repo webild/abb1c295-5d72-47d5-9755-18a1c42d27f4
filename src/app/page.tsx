@@ -35,10 +35,14 @@ export default function Home() {
         <MinimalAbout description={aboutContent.description} />
       </section>
       <section id="terms" className="bg-white py-16">
-        <ContentTextbox title={<h2>Terms of Service</h2>} description={<p>Summary of our terms and conditions.</p>} className="text-lg" children={<div>Content for Terms of Service</div>} />
+        <ContentTextbox title={<h2>Terms of Service</h2>} description={<p>Summary of our terms and conditions.</p>} className="text-lg">
+          <div>Content for Terms of Service</div>
+        </ContentTextbox>
       </section>
       <section id="policy" className="bg-[#F9FAFB] py-16">
-        <ContentTextbox title={<h2>Privacy Policy</h2>} description={<p>Summary of our privacy practices.</p>} className="text-lg" children={<div>Content for Privacy Policy</div>} />
+        <ContentTextbox title={<h2>Privacy Policy</h2>} description={<p>Summary of our privacy practices.</p>} className="text-lg">
+          <div>Content for Privacy Policy</div>
+        </ContentTextbox>
       </section>
       <section id="contact" className="bg-white py-16">
         <h2 className="text-2xl font-bold">{contactContent.headline}</h2>
