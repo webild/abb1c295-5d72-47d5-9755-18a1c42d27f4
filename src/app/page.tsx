@@ -1,10 +1,10 @@
 "use client"
-inport { useState } from 'react';
+import { useState } from 'react';
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import SimpleHero from '@/components/sections/layouts/hero/SimpleHero';
 import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import ContentTextbox from '@/components/textbox/ContentTextbox';
-import { Button } from '@/components/buttons/PushableButton';
+import { PushableButton } from '@/components/buttons/PushableButton';
 import Image from 'next/image';
 
 const heroContent = { title: "Welcome to MySite", description: "Deliver clarity and purpose with our solutions.", primaryButtonText: "Get Started", secondaryButtonText: "Learn More" };
@@ -20,7 +20,7 @@ const CustomContactForm = () => {
       <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="p-2 border rounded" required />
       <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="p-2 border rounded" required />
       <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="p-2 border rounded" required></textarea>
-      <Button text="Submit" onClick={() => { /* Submit logic here */ }} className="bg-blue-500 text-white rounded" />
+      <PushableButton text="Submit" onClick={() => { /* Submit logic here */ }} className="bg-blue-500 text-white rounded" />
       <p className="text-xs">{contactContent.privacyNote}</p>
     </form>
   );
